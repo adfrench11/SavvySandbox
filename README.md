@@ -9,6 +9,7 @@ Quick facts about me:
 + I love living in Chattanooga
 + I'm excited about this project!
 
+Fun fact: I enjoy tea tins. :)
 
 Profiles:
 + [GitHub](https://github.com/adfrench11)
