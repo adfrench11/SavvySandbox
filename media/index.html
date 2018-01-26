@@ -6,13 +6,44 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Alex French | Media</title>
   <style>
+    body {
+      background: green;
+      color: white;
+    }
     video {
       width: 320px;
       height: 240px;
     }
+    iframe {
+      border: 0;
+    }
+    marquee {
+      font-size: 100px;
+      font-weight: bold;
+      color: red;
+    }
+    h1 {
+      animation: blink-animation 1s steps(5, start) infinite;
+      -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+    @-webkit-keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+    video {
+      display: block;
+    }
   </style>
 </head>
 <body>
+  <h1>Welcome to the 90s!</h1>
+  <marquee>Welcome to... the Grand Canyon! Yeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeehhhhhhhhhaaaaaaaaaaaaaaaaaaaaaaaawww</marquee>
   <audio controls autoplay loop hidden>
     <source src="https://s3.us-east-2.amazonaws.com/twp-media/music.opus" type="audio/ogg">
     Your browser does not support the audio element.
@@ -21,6 +52,7 @@
     <source src="https://s3.us-east-2.amazonaws.com/twp-media/bug.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.160509403903!2d-85.12778614914421!3d35.077722080242815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886062c956deea21%3A0xdec9edd0e1322934!2sEnterprise+South+Nature+Park!5e0!3m2!1sen!2sus!4v1516937105297" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <h3> Not filmed here: </h3>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.160509403903!2d-85.12778614914421!3d35.077722080242815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886062c956deea21%3A0xdec9edd0e1322934!2sEnterprise+South+Nature+Park!5e0!3m2!1sen!2sus!4v1516937105297" width="400" height="300" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
