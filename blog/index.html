@@ -6,11 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Alex French | Blog</title>
   <style>
+/*
+* {
+border: 1px solid red;
+}
+div {
+  box-sizing: border-box;
+      width: 300px;
+      height: 200px;
+}
+*/
+    html {
+      box-sizing: border-box;
+    }
     body {
       background-color: #2df9cc;
     }
     div {
       background-color: #00d0a2;
+      padding: 1px 10px;
     }
     h1 {
       font-size: 2.1em;
@@ -24,41 +38,49 @@
     .highlight {
       background-color: #bafff0;
     }
+    .container {
+      max-width: 960px;
+      margin: 10px auto;
+    }
     #header {
-      width: 30%;
+      width: 97%;
+      padding-top: 1px;
+      padding-bottom: 10px;
     }
     #navigation {
-      width: 15%;
+      width: 97%;
     }
     #content {
-      width: 80%;
+      width: 97%;
+      border: 1px solid blue;
     }
     #footer {
       font-size: 0.75em;
       text-align: right;
-      width: 15%;
+      width: 97%;
       line-height: 0.75;
     }
   </style>
 </head>
 <body>
-  <div id="header">
+  <div id="header" class="container">
     <h1>Blog</h1>
     <h2>Welcome</h2>
     <img src="../pics/blues.jpg" height=50px>
   </div>
-  <div id="navigation">
+  <div id="navigation" class="container">
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/projects/index.html">Projects</a></li>
       <li><a href="/media/index.html">Media</a></li>
+      <li><a href="">Blog</a></li>
     </ul>
   </div>
-  <div id="content">
+  <div id="content" class="container">
     <h2>Thanks for Visiting!</h2>
     <p>Welcome to <span class="highlight">my blog</span>! You'll find my blog posts here. <span class="highlight">Thanks</span> for reading!</p>
   </div>
-  <div id="footer">
+  <div id="footer" class="container">
     <p><a href="mailto:adfrench11@gmail.com?Subject=Contact%20Form">Contact Me</a></p>
     <p>&copy; Alex French 2018</p>
   </div>
