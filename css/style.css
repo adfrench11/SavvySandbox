@@ -1,6 +1,100 @@
+/* Site styles */
+html {
+  box-sizing: border-box;
+}
 body {
   background-color: SpringGreen;
 }
+div {
+  background-color: #00e271;
+  padding: 10px;
+  /* margin: 10px; */
+}
+h1 {
+  font-size: 2.1em;
+}
+h2 {
+  font-size: 1.6em;
+}
+p {
+  font-size: 1.1em;
+}
+.highlight {
+  background-color: #bafff0;
+}
+.container {
+  /* max-width: 960px; */
+  /* margin: 0 auto; */
+  margin: 10px auto;
+}
+
+.navigation {
+  /* width: 97%; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 5px;
+  margin-top: 0;
+}
+.navigation > ul > li {
+  position: relative;
+  display: inline;
+  list-style: none;
+}
+.navigation .dropdown {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  display: none;
+}
+
+.navigation a:hover + .dropdown {
+  display: block;
+}
+
+.navigation > ul.container {
+  height: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.navigation + .container {
+  margin-top: 5em;
+}
+
+.header {
+  /* width: 97%; */
+  padding-top: 1px;
+  padding-bottom: 10px;
+}
+.content {
+  /* width: 97%; */
+  border: 1px solid blue;
+}
+.footer {
+  font-size: 0.75em;
+  text-align: right;
+  /* width: 97%; */
+  line-height: 0.75;
+}
+
+/* Landing Page */
+img {
+  height: 100px;
+  width: 100px;
+}
+.blue {
+  color: blue;
+}
+#fun-fact {
+  color: purple;
+  font-size: 90%;
+}
+
+/* Contact Form */
 form, input, label, select {
   padding: 5px;
   margin: 5px;
@@ -29,72 +123,9 @@ select, input, textarea {
   border: 1px solid blue;
   border-radius: 5px;
 }
-img {
-  height: 100px;
-  width: 100px;
-}
-.blue {
-  color: blue;
-}
-#fun-fact {
-  color: purple;
-  font-size: 90%;
-}
+
+/* Media page */
 video {
   width: 320px;
   height: 240px;
-}
-/*
-* {
-border: 1px solid red;
-}
-div {
-box-sizing: border-box;
-    width: 300px;
-    height: 200px;
-}
-*/
-html {
-  box-sizing: border-box;
-}
-body {
-  background-color: SpringGreen;
-}
-div {
-  background-color: #00e271;
-  padding: 1px 10px;
-}
-h1 {
-  font-size: 2.1em;
-}
-h2 {
-  font-size: 1.6em;
-}
-p {
-  font-size: 1.1em;
-}
-.highlight {
-  background-color: #bafff0;
-}
-.container {
-  max-width: 960px;
-  margin: 10px auto;
-}
-#header {
-  width: 97%;
-  padding-top: 1px;
-  padding-bottom: 10px;
-}
-#navigation {
-  width: 97%;
-}
-#content {
-  width: 97%;
-  border: 1px solid blue;
-}
-#footer {
-  font-size: 0.75em;
-  text-align: right;
-  width: 97%;
-  line-height: 0.75;
 }

@@ -8,26 +8,40 @@
   <link type="text/css" rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
-  <div id="header" class="container">
+
+  <div class="navigation container">
+    <ul class="container">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/index.html">Projects</a>
+        <ul class="dropdown" >
+          <li><a href="#">First Project</a></li>
+          <li><a href="#">Second Project</a></li>
+          <li><a href="#">Third Project</a></li>
+        </ul>
+      </li>
+      <li><a href="/media/index.html">Media</a></li>
+      <li><a href="">Blog</a></li>
+      <li><a href="/contact/index.html">Contact</a></li>
+      <li><a href="mailto:adfrench11@gmail.com?Subject=Contact%20Form">Contact Me</a></li>
+    </ul>
+  </div>
+
+  <div class="header container">
     <h1>Blog</h1>
     <h2>Welcome</h2>
     <img src="../pics/blues.jpg" height=50px>
   </div>
-  <div id="navigation" class="container">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/projects/index.html">Projects</a></li>
-      <li><a href="/media/index.html">Media</a></li>
-      <li><a href="">Blog</a></li>
-    </ul>
-  </div>
-  <div id="content" class="container">
+
+  <div class="content container">
     <h2>Thanks for Visiting!</h2>
     <p>Welcome to <span class="highlight">my blog</span>! You'll find my blog posts here. <span class="highlight">Thanks</span> for reading!</p>
   </div>
-  <div id="footer" class="container">
+
+  <div class="footer container">
     <p><a href="mailto:adfrench11@gmail.com?Subject=Contact%20Form">Contact Me</a></p>
     <p>&copy; Alex French 2018</p>
   </div>
+  
 </body>
 </html>

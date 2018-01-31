@@ -8,16 +8,25 @@
   <link type="text/css" rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
-  <!-- navigation bar, .container area, and footer (like the other pages in your portfolio site) -->
 
-  <div id="navigation" class="container">
-    <ul>
+  <div class="navigation container">
+    <ul class="container">
       <li><a href="/">Home</a></li>
-      <li><a href="/projects/index.html">Projects</a></li>
+      <li>
+        <a href="/projects/index.html">Projects</a>
+        <ul class="dropdown" >
+          <li><a href="#">First Project</a></li>
+          <li><a href="#">Second Project</a></li>
+          <li><a href="#">Third Project</a></li>
+        </ul>
+      </li>
       <li><a href="/media/index.html">Media</a></li>
       <li><a href="/blog/index.html">Blog</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="mailto:adfrench11@gmail.com?Subject=Contact%20Form">Contact Me</a></li>
     </ul>
   </div>
+
   <div class="container">
 
     <!--
@@ -90,7 +99,8 @@
     </form>
 
   </div>
-  <div id="footer" class="container">
+
+  <div class="footer container">
     <p><a href="mailto:adfrench11@gmail.com?Subject=Contact%20Form">Contact Me</a></p>
     <p>&copy; Alex French 2018</p>
   </div>
