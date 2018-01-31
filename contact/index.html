@@ -25,13 +25,14 @@
       The method attribute specifies the HTTP method (GET or POST)
     -->
 
-    <form action="form-responses/new" method="POST">
+    <!-- <form action="form-responses/new" method="POST"> -->
+    <form action="//formspree.io/"adfrench11@gmail.com" method="POST">
 
-      <input type="text" name="firstname" value="First Name" autofocus>
+      <input type="text" name="firstname" value="First Name" placeholder="First name" autofocus required>
       <br>
-      <input type="text" name="lastname" value="Last Name">
+      <input type="text" name="lastname" value="Last Name" placeholder="Last name" required>
       <br>
-      <input type="email" name="userEmail" placeholder="your.email@example.com">
+      <input type="email" name="userEmail" placeholder="your.email@example.com" required>
 
       <br>
       <br>
@@ -39,13 +40,10 @@
         <br>
         <input type="radio" name="subject" value="professional" checked><span>I'd like to hire you!</span>
         <br>
-        <input type="radio" name="subject" value="personal" checked><span>Personal message</span>
+        <input type="radio" name="subject" value="personal"><span>Personal message</span>
         <br>
-        <input type="radio" name="subject" value="other" checked><span>Don't know/something else</span>
+        <input type="radio" name="subject" value="other"><span>Don't know/something else</span>
       </label>
-
-      <br><br>
-      <input type="datetime-local">Hey there 123
 
       <br>
       <br>
