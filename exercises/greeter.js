@@ -1,7 +1,7 @@
 var name = prompt('What is your name?');
 
 var checkName = function() {
-  if(name === "") {
+  if(name === "" || !(isNaN(name)) || name === null) {
     name = prompt('What is your name, for real this time?');
 
     checkName();
@@ -15,7 +15,7 @@ alert('Hello ' + name);
 var userAge = prompt('How old are you, ' + name + '?');
 
 var checkUserAge = function() {
-  if(isNaN(userAge) || userAge === "") {
+  if( isNaN(userAge) || userAge === "" || userAge === null || userAge.includes(" ") ) {
     userAge = prompt(name + ', come on! Give me a number: how old are you?');
     checkUserAge();
   }
@@ -34,3 +34,22 @@ var greetUser = function() {
 }
 
 greetUser();
+
+
+
+var tellJoke = function() {
+  alert("Okay, get ready for a dumb knock-knock joke, " + name + "!");
+  var whoIsThere = prompt("KNOCK, KNOCK!", "WHO'S THERE?");
+  if (whoIsThere !== "WHO'S THERE?") {
+      alert("Sorry, " + name + ", no joke for you!");
+  } else {
+      var blankWho = prompt("HATCH.", "HATCH WHO?");
+      if (blankWho !== "HATCH WHO?") {
+        alert("Well, " + name + ", I was going to tell you who, but I guess you don't want to know!");
+      } else {
+        alert("GESUNDHEIT!");
+      }
+  }
+}
+
+tellJoke();
