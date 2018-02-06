@@ -45,7 +45,7 @@ var tellJoke = function() {
   } else {
       var blankWho = prompt("HATCH.", "HATCH WHO?");
       if (blankWho !== "HATCH WHO?") {
-        alert("Well, " + name + ", I was going to tell you who, but I guess you don't want to know!");
+        alert("Well, " + name + ", I was going to tell you more, but I guess you don't want to know!");
       } else {
         alert("GESUNDHEIT!");
       }
