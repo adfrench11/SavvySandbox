@@ -1,7 +1,7 @@
 var name = prompt('What is your name?');
 
 var checkName = function() {
-  if( !isNaN(name) || name == false || name === null ) {
+  if( !isNaN(name) || !name || name === null ) {
     name = prompt('What is your name, for real this time?');
 
     checkName();
@@ -15,7 +15,7 @@ alert('Hello ' + name);
 var userAge = prompt('How old are you, ' + name + '?');
 
 var checkUserAge = function() {
-  if( isNaN(userAge) || userAge == false || userAge === null ) {
+  if( isNaN(userAge) || !userAge || userAge === null || userAge.includes(" ") ) {
     userAge = prompt(name + ', come on! Give me a number: how old are you?');
     checkUserAge();
   }
