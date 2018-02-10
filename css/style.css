@@ -54,14 +54,19 @@ li a {
   display: inline;
   list-style: none;
 }
+
 .navigation .dropdown {
-  position: absolute;
-  top: 1em;
-  right: 0;
-  display: none;
+    position: absolute;
+    top: 1em;
+    left: 0;
+    width: 100px;
+    margin: 5px;
+    background-color: SpringGreen;
+    border-radius: 5px;
+    display: none;
 }
 
-.navigation a:hover + .dropdown {
+.navigation .has-dropdown a:hover + .dropdown {
   display: block;
 }
 
