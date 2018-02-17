@@ -1,0 +1,12 @@
+.adj {
+  font-weight: bold;
+}
+.noun {
+  color: red;
+}
+.verb {
+  color: green;
+}
+.adv {
+  font-style: italic;
+}
