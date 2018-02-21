@@ -49,7 +49,8 @@
       <li><a href="https://github.com/adfrench11"><span><i class="fa fa-github"></i>Github<span></a></li>
       <li><a href="https://plus.google.com/u/0/115956373067610580732"><span><i class="fa fa-google-plus"></i>Google+</span></a></li>
     </ul>
-    <img src="pics/blues.jpg" alt="My profile photo">
+    <img id="profile-pic" src="pics/blues.jpg" alt="My profile photo">
+    <p id="buried-treasure">Ouch, you clicked me!</p>
 
     <!-- add content from markdown -->
     <!-- <br>
@@ -59,5 +60,13 @@
       <li><a href="tel:555-555-5555"><span><i class="fa fa-phone"></i>My REAL phone number</span></a></li>
     </ul>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+    $('#profile-pic').on('click', () => {
+      $('#buried-treasure').slideDown();
+      $('#buried-treasure').fadeOut();
+    });
+  </script>
 </body>
 </html>

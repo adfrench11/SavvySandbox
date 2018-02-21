@@ -34,6 +34,9 @@ li a {
 .highlight {
   background-color: #bafff0;
 }
+#buried-treasure {
+  display: none;
+}
 .container {
   /* max-width: 960px; */
   /* margin: 0 auto; */
