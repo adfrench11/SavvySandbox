@@ -38,10 +38,8 @@
     <h2>Welcome to my portfolio!</h2>
     <!-- <hr> -->
     <p>Quick facts about me:</p>
-    <ul>
-      <li>I like gardening</li>
-      <li>I love living in Chattanooga</li>
-      <li>I'm excited about this project!</li>
+    <ul id="facts-list">
+
     </ul>
     <p id="fun-fact">Fun fact: I enjoy tea tins. :)</p>
     <p>My Profiles:</p>
@@ -63,10 +61,31 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script>
+
     $('#profile-pic').on('click', () => {
       $('#buried-treasure').slideDown();
       $('#buried-treasure').fadeOut();
     });
+
+    var factsArray = ["I like gardening",
+                      "I love living in Chattanooga",
+                      "I'm excited about this project!"];
+
+    function appendStrings(arr, elStr) {
+      for (i = 0; i < arr.length; i++) {
+        $('#facts-list').append("<" + elStr + ">" + arr[i] + "</" + elStr + ">");
+      }
+    }
+
+    // appendStrings(factsArray, "li");
+
+    var elStr = 'li';
+    function appendString(item) {
+      $('#facts-list').append("<" + elStr + ">" + item + "</" + elStr + ">");
+    }
+
+    factsArray.forEach(appendString);
+
   </script>
 </body>
 </html>
