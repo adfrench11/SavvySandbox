@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dogs</title>
+</head>
+<body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+
+    // Create array of puppy objects
+    var puppies = [{
+      name: 'Henry',
+      age: 0.5,
+      breed: 'Aussie',
+      food: 'kibble',
+      toys: ['tennis ball', 'chew toy'],
+      picture: 'http://rubyriverminiaustralianshepherds.com/wp-content/uploads/aussie-puppy-for-sale-940x412.jpg'
+    }, {
+      name: 'Tilly',
+      age: 5,
+      breed: 'Mutt',
+      food: 'kibble',
+      toys: ['bone', 'kong', 'squeaky toy'],
+      picture: 'http://www.dogchannel.com/images/zones/top_promo/excited-mixed-breed.jpg'
+    }, {
+      name: 'Apollo',
+      age: 10,
+      breed: 'Labrador',
+      food: 'absolutely anything',
+      toys: ['old sock', 'other old sock', 'more old socks'],
+      picture: 'http://media.cmgdigital.com/shared/img/photos/2014/08/01/5a/66/LadyLabrador.jpg'
+    }]
+
+    // log each puppy's name
+    puppies.forEach(function(item){
+    	console.log(item.name);
+    })
+
+    // create an array of all puppies' toys
+    var allToys = [];
+    puppies.forEach(function(puppy){
+
+    	puppy.toys.forEach(function(toy){
+    		allToys.push(toy);
+    	})
+    })
+    console.log(allToys);
+
+    // take an array of dogs and a toy name and get the name of the dog whose toy it is
+    function getDogByToy(dogArr, toyStr){
+      var returnString = "Sorry, according to our records, no dog has that toy.";
+    	dogArr.forEach(function(dog){
+    		dog.toys.forEach(function(toy){
+    			if( toy === toyStr ){
+    				returnString = dog.name;
+    			}
+    		});
+    	});
+      console.log(returnString);
+    }
+
+    getDogByToy(puppies, 'kong');
+
+    // Put each dog's picture and name on the page
+    puppies.forEach(function(puppy){
+      $('body').append("<img src='" + puppy.picture + "' alt='" + puppy.name + "' width='600px'>");
+      $('body').append("<h2>" + puppy.name + "</h2><br>");
+    });
+
+  </script>
+</body>
+</html>

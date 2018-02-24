@@ -38,9 +38,7 @@
     <h2>Welcome to my portfolio!</h2>
     <!-- <hr> -->
     <p>Quick facts about me:</p>
-    <ul id="facts-list">
-
-    </ul>
+    <ul id="facts-list"></ul>
     <p id="fun-fact">Fun fact: I enjoy tea tins. :)</p>
     <p>My Profiles:</p>
     <ul>
@@ -57,34 +55,81 @@
       <li><a href="mailto:adfrench11@gmail.com?Subject=Contact%20Form"><span><i class="fa fa-paper-plane"></i>Contact Me</span></a></li>
       <li><a href="tel:555-555-5555"><span><i class="fa fa-phone"></i>My REAL phone number</span></a></li>
     </ul>
+    <ul id='contact-obj'></ul>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script>
 
+    // Add click event to profile pic
     $('#profile-pic').on('click', () => {
       $('#buried-treasure').slideDown();
       $('#buried-treasure').fadeOut();
     });
 
+    // Define Quick Facts list
     var factsArray = ["I like gardening",
                       "I love living in Chattanooga",
                       "I'm excited about this project!"];
 
+    // Function to add array items as html elements of choice
     function appendStrings(arr, elStr) {
       for (i = 0; i < arr.length; i++) {
         $('#facts-list').append("<" + elStr + ">" + arr[i] + "</" + elStr + ">");
       }
     }
 
-    // appendStrings(factsArray, "li");
+    // Fill in Quick Facts List with appendStrings
+    // appendStrings(factsArray, "li"); (originally used but refactored and replaced below)
 
+    // Fill in Quick Facts list with a different function using forEach
     var elStr = 'li';
     function appendString(item) {
       $('#facts-list').append("<" + elStr + ">" + item + "</" + elStr + ">");
     }
 
     factsArray.forEach(appendString);
+
+    // Adding contact info as object to page
+
+    // Define contact info object
+    let contactObject = {
+      'name': {
+        	'firstName': 'Alex',
+    		  'lastName': 'French'
+    	},
+      email: "adfrench11@gmail.com",
+      github: "https://github.com/adfrench11",
+      quote: ["Hello. My name is Inigo Montoya. You killed my father. Prepare to die!",
+              "I am disinclined to acquiesce to your request.",
+              "Shaken, not stirred"]
+    }
+
+    // function to list object items on page
+    function listItem(objItem){
+    	let itemString = "<li>" + objItem + "</li>";
+
+    	if(Array.isArray(objItem)){
+    		itemString = "<ol>";
+    		objItem.forEach(function(arrItem){
+    			itemString += "<li>" + arrItem + "</li>";
+    		});
+    		itemString += "</ol>";
+      } else if (typeof objItem === 'object'){
+    		itemString = "<li>";
+    		for (var key in objItem){
+    			itemString += objItem[key] + " ";
+            }
+    		itemString += "</li>";
+        }
+
+    	$('#contact-obj').append(itemString);
+    };
+
+    // Add contact obj to page
+    for(var key in contactObject){
+    	listItem(contactObject[key]);
+    }
 
   </script>
 </body>

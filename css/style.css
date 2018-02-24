@@ -140,17 +140,18 @@ img {
   margin: 0px;
 }
 
-/* Contact Form */
+/* Contact Form & Form Styles */
 form, input, label, select {
   padding: 5px;
   margin: 5px;
 }
 select, textarea, input[type="text"], input[type="email"], input[type="submit"] {
-  width: 40%;
+  width: 50%;
   height: 15%;
 }
 form {
   font-size: 1.1em;
+  margin-left: 25%;
 }
 input {
   font-size: 0.9em;
@@ -168,6 +169,33 @@ select {
 select, input, textarea {
   border: 1px solid blue;
   border-radius: 5px;
+}
+/* CYOA Form Styles */
+.cyoa-container {
+  width: 50%;
+  margin-left: 25%;
+  height: 50%;
+  margin-top: 15%;
+  margin-bottom: 25%;
+}
+.cyoa-container p {
+  font-size: 1.75em;
+  padding: 10px;
+}
+.cyoa-container input[type="radio"] {
+  height: 1em;
+  width: 1em;
+  padding: 10px;
+}
+.cyoa-container input[type="submit"] {
+  display: none;
+}
+.cyoa-container form {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.75em;
 }
 
 /* Media page */
