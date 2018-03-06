@@ -171,26 +171,26 @@ select, input, textarea {
   border-radius: 5px;
 }
 /* CYOA Form Styles */
-.cyoa-container {
+#cyoa-container {
   width: 50%;
   margin-left: 25%;
   height: 50%;
   margin-top: 15%;
   margin-bottom: 25%;
 }
-.cyoa-container p {
+#cyoa-container p {
   font-size: 1.75em;
   padding: 10px;
 }
-.cyoa-container input[type="radio"] {
+#cyoa-container input[type="radio"] {
   height: 1em;
   width: 1em;
   padding: 10px;
 }
-.cyoa-container input[type="submit"] {
+#cyoa-container input[type="submit"] {
   display: none;
 }
-.cyoa-container form {
+#cyoa-container form {
   margin-left: 5px;
   display: flex;
   flex-direction: column;

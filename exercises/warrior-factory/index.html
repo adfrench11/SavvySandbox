@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Warrior Factory</title>
+</head>
+<body>
+
+  <script>
+
+    function warriorFactory(name, weapon){
+      var warrior = {};
+
+      warrior.name = name;
+      warrior.weapon = weapon;
+
+      warrior.attack = function(){
+        return this.name + ' attacks with ' + this.weapon + '.';
+        };
+
+      warrior.adventure = function(){
+        return 'Behold, the great warrior ' + this.name + '! ' + this.name + ' crosses the Valley of Doom, and ' + this.attack() + ' Then, ' + this.name + ' scales the Cliffs of Engard, and ' + this.attack() + ' Finally, all rejoice and hail the mighty ' + this.name + '!';
+        };
+
+      return warrior;
+    };
+
+    var thar = warriorFactory('Thar, Son of Dar, Rider of Barrels', 'bottles of wine he just found');
+
+    console.log(thar.adventure());
+
+  </script>
+</body>
+</html>

@@ -9,38 +9,12 @@
   <link type="text/css" rel="stylesheet" href="../../css/style.css"/>
 </head>
 <body>
-  <div class="container cyoa-container">
-    <p>You walk into a room and see a table. On the table are a book and a glass of wine. What do you do?</p>
-    <form>
-      <label>
-        <input id='option-1' type="radio" name="option" value="Read"><span>Open the book</span></input>
-      </label>
-      <label>
-        <input id='option-2' type="radio" name="option" value="Drink"><span>Drink the wine</span></input>
-      </label>
-      <input type="submit">
-    </form>
+  <div class="container" id="cyoa-container">
+
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-  <script>
-
-    let option1 = document.getElementById('option-1');
-    let option2 = document.getElementById('option-2');
-
-    $('input').on('click', (event) => {
-
-      $('form').submit(function(event) {
-        event.preventDefault();
-      });
-      // $('input[name=radioName]:checked', '#myForm').val()
-      selVal = $('input:checked').val();
-      console.log(selVal);
-    });
-
-  </script>
-
-  <!-- <script type="text/javascript" src="cyoa.js"></script> -->
+  <script type="text/javascript" src="cyoa.js"></script>
 </body>
 </html>
