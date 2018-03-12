@@ -44,5 +44,29 @@
     <p>&copy; Alex French 2018</p>
   </div>
 
+  <div id="data"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+
+    // function to render post on page
+    function renderPost(dataObj){
+      // { userId: 1, id: 1, title: "sun..uri optio reprehenderit..", body: "quia et su.." }
+      $('#data').append("<div id='post-" + dataObj.id + "'></div><br>");
+      $("#post-" + dataObj.id).append("<h2>" + dataObj.title + "</h2>");
+      $("#post-" + dataObj.id).append("<h4><i>by user " + dataObj.userId + "</i> | post " + dataObj.id + "</h4>");
+      $("#post-" + dataObj.id).append("<p>" + dataObj.body + "</p>");
+
+      $('#data div:nth-of-type(2n+1)').css('background-color', '#bafff0');
+      $('#data div:nth-of-type(2n)').css('background-color', '#a2f7c0');
+    };
+
+    let getPosts = $.ajax( "https://jsonplaceholder.typicode.com/posts" );
+
+    getPosts.then(
+      (data) => data.forEach(renderPost)
+    );
+
+  </script>
 </body>
 </html>
